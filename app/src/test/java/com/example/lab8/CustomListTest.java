@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class CustomListTest {
     public CustomList MockCityList() {
         CustomList list = new CustomList(null, new ArrayList<>());
-        list.add(mockCity());
         return list;
     }
 
@@ -37,7 +36,7 @@ public class CustomListTest {
     void testHasCity() {
         CustomList cityList = MockCityList();
 
-        assertTrue(cityList.hasCity(mockCity()));
+        assertFalse(cityList.hasCity(mockCity()));
 
         assertTrue(cityList.hasCity(new City("Edmonton", "Alberta")));
 
