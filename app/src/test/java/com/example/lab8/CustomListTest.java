@@ -59,12 +59,12 @@ public class CustomListTest {
 
 //    @Test
 //    void testCountCities() {
-//        CityList cityList = mockCityList();
+//        CustomList cityList = MockCityList();
 //
 //        assertEquals(0, cityList.countCities());
-//        cityList.add(new City("Regina", "Saskatchewan"));
+//        cityList.addCity(new City("Regina", "Saskatchewan"));
 //        assertEquals(1, cityList.countCities());
-//        cityList.add(mockCity());
+//        cityList.addCity(mockCity());
 //        assertEquals(2, cityList.countCities());
 //        cityList.delete(mockCity());
 //        assertEquals(1, cityList.countCities());
