@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class CustomListTest {
     public CustomList MockCityList() {
         CustomList list = new CustomList(null, new ArrayList<>());
-        cityList.add(mockCity());
+        list.add(mockCity());
         return list;
     }
 
