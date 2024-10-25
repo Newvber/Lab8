@@ -44,16 +44,16 @@ public class CustomListTest {
         assertFalse(cityList.hasCity(city));
     }
 
-    @Test
-    void testDelete() {
-        CustomList cityList = MockCityList();
-
-        City city = new City("Regina", "Saskatchewan");
-        cityList.add(city);
-        assertTrue(cityList.hasCity(city));
-        cityList.delete(city);
-        assertFalse(cityList.hasCity(city));
-    }
+//    @Test
+//    void testDelete() {
+//        CustomList cityList = MockCityList();
+//
+//        City city = new City("Regina", "Saskatchewan");
+//        cityList.add(city);
+//        assertTrue(cityList.hasCity(city));
+//        cityList.delete(city);
+//        assertFalse(cityList.hasCity(city));
+//    }
 
 
 //
