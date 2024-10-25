@@ -28,36 +28,24 @@ public class CustomListTest {
     }
 
     @Test
-    void testHasCity() {
-        CityList cityList = mockCityList();
-
-        assertTrue(cityList.hasCity(mockCity()));
-
-        assertTrue(cityList.hasCity(new City("Edmonton", "Alberta")));
-
-        City city = new City("Regina", "Saskatchewan");
-        assertFalse(cityList.hasCity(city));
+    public void deleteCityTest() {
+        CustomList list = MockCityList();
+        City newCity = new City("Edmonton", "Alberta");
+        list.addCity(newCity);
+        list.deleteCity(newCity);
+        int expectedCountAfterDelete = 0;
+        assertEquals(expectedCountAfterDelete, list.getCount(), "After deleting the newCity, the list should be empty again. ");
     }
 
-//    @Test
-//    public void deleteCityTest() {
-//        CustomList list = MockCityList();
-//        City newCity = new City("Edmonton", "Alberta");
-//        list.addCity(newCity);
-//        list.deleteCity(newCity);
-//        int expectedCountAfterDelete = 0;
-//        assertEquals(expectedCountAfterDelete, list.getCount(), "After deleting the newCity, the list should be empty again. ");
-//    }
-//
-//    @Test
-//    public void countCitiesTest() {
-//        CustomList list = MockCityList();
-//        int expectedCitiesCount = 0;
-//        assertEquals(expectedCitiesCount, list.countCities());
-//        City newCity = new City("Edmonton", "Alberta");
-//        list.addCity(newCity);
-//        int expectedCitiesCountAfterAdd = 1;
-//        assertEquals(expectedCitiesCountAfterAdd, list.countCities());
-//    }
+    @Test
+    public void countCitiesTest() {
+        CustomList list = MockCityList();
+        int expectedCitiesCount = 0;
+        assertEquals(expectedCitiesCount, list.countCities());
+        City newCity = new City("Edmonton", "Alberta");
+        list.addCity(newCity);
+        int expectedCitiesCountAfterAdd = 1;
+        assertEquals(expectedCitiesCountAfterAdd, list.countCities());
+    }
 
 }
