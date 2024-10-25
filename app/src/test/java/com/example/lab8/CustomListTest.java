@@ -45,7 +45,7 @@ public class CustomListTest {
 
     @Test
     void testDelete() {
-        CityList cityList = mockCityList();
+        CityList cityList = MockCityList();
 
         City city = new City("Regina", "Saskatchewan");
         cityList.add(city);
