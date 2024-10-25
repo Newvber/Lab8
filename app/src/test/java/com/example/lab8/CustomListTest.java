@@ -33,7 +33,7 @@ public class CustomListTest {
 
     @Test
     void testHasCity() {
-        CityList cityList = MockCityList();
+        CustomList cityList = MockCityList();
 
         assertTrue(cityList.hasCity(mockCity()));
 
@@ -45,7 +45,7 @@ public class CustomListTest {
 
     @Test
     void testDelete() {
-        CityList cityList = MockCityList();
+        CustomList cityList = MockCityList();
 
         City city = new City("Regina", "Saskatchewan");
         cityList.add(city);
